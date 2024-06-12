@@ -1,0 +1,46 @@
+/* 为工作项目中的链接添加样式 */
+.work-item a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.35em;
+    margin-bottom: 2em;
+}
+
+/* 图片样式 */
+.work-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* 图片悬停效果 */
+.work-item a:before {
+    content: '进入'; /* 按钮文本 */
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px; /* 按钮内边距 */
+    background-color: rgba(255, 255, 255, 0); /* 按钮背景色 */
+    color: #ffffff; /* 按钮文本颜色 */
+    border: 2px solid rgba(255, 255, 255, 0); /* 按钮边框 */
+    border-radius: 5px; /* 按钮边框圆角 */
+    opacity: 0; /* 默认隐藏 */
+    font-family: "Microsoft YaHei", sans-serif; /* 设置字体为微软雅黑 */
+    transition: opacity 0.3s ease;
+}
+
+.work-item a:hover:before {
+    opacity: 1; /* 悬停时显示按钮 */
+    background-color: rgba(0, 0, 0, 0.5); /* 按钮背景色 */
+}
+
+.work-item a img {
+    opacity: 1; /* 默认显示图片 */
+    transition: opacity 0.3s ease;
+}
+
+.work-item a:hover img {
+    opacity: 0; /* 悬停时隐藏图片 */
+}
